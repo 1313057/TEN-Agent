@@ -1,0 +1,36 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - agoraAppId
+      - openaiApiKey
+      - deepgramApiKey
+      - fishAudioTtsKey
+      - geminiApiKey
+    properties:
+      agoraAppId:
+        type: string
+        description: The Agora App ID for RTC capabilities.
+      agoraAppCertificate:
+        type: string
+        description: The Agora App Certificate.
+      openaiApiKey:
+        type: string
+        description: The API key for OpenAI.
+      deepgramApiKey:
+        type: string
+        description: The API key for Deepgram ASR.
+      fishAudioTtsKey:
+        type: string
+        description: The API key for FishAudio TTS.
+      geminiApiKey:
+        type: string
+        description: The API key for Gemini LLM.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({command: '/app/server/bin/api', args: [], env: {AGORA_APP_ID: config.agoraAppId, AGORA_APP_CERTIFICATE: config.agoraAppCertificate, OPENAI_API_KEY: config.openaiApiKey, DEEPGRAM_API_KEY: config.deepgramApiKey, FISH_AUDIO_TTS_KEY: config.fishAudioTtsKey, GEMINI_API_KEY: config.geminiApiKey}})
