@@ -8,6 +8,7 @@
 [![Issues closed](https://img.shields.io/github/issues-search?query=repo%3ATEN-framework%2Ften-agent%20is%3Aclosed&label=issues%20closed&labelColor=green&color=green)](https://github.com/TEN-framework/ten-agent/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/TEN-framework/ten-agent/pulls)
 [![GitHub license](https://img.shields.io/badge/License-Apache_2.0-blue.svg?labelColor=%20%23155EEF&color=%20%23528bff)](https://github.com/TEN-framework/ten-agent/blob/main/LICENSE)
+[![smithery badge](https://smithery.ai/badge/@1313057/smithery)](https://smithery.ai/server/@1313057/smithery)
 
 [![Discord TEN Community](https://dcbadge.vercel.app/api/server/VnPftUzAMJ)](https://discord.gg/VnPftUzAMJ)
 
@@ -76,6 +77,14 @@ For Apple Silicon Macs, uncheck "Use Rosetta for x86/amd64 emulation" in Docker 
 ![Docker Setting](https://github.com/TEN-framework/docs/blob/main/assets/gif/docker_setting.gif?raw=true)
 
 <br>
+
+### Installing via Smithery
+
+To install TEN Agent for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@1313057/smithery):
+
+```bash
+npx -y @smithery/cli install @1313057/smithery --client claude
+```
 
 ### Next step
 
